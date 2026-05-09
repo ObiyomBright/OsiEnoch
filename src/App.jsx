@@ -35,6 +35,8 @@ function App() {
           <div className="lg:col-span-7 space-y-16">
             <Portfolio />
             {/* Mobile-only Contact section (shows at the bottom of the list) */}
+
+            <div id="contact" className="scroll-mt-20" />
             <div className="lg:hidden">
               <Contact />
             </div>
