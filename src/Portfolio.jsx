@@ -38,7 +38,7 @@ const VideoCard = ({ project, onOpen }) => {
           src={project.videoUrl}
           className="w-full h-full object-cover opacity-70 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
           loop
-          muted={false} 
+          muted={true} 
           playsInline
         />
         
@@ -49,9 +49,9 @@ const VideoCard = ({ project, onOpen }) => {
           </div>
         </div>
 
-        <div className="absolute bottom-3 right-3 px-2 py-1 bg-black/80 backdrop-blur-sm rounded text-[9px] font-bold text-gray-300 uppercase border border-gray-700">
+        {/* <div className="absolute bottom-3 right-3 px-2 py-1 bg-black/80 backdrop-blur-sm rounded text-[9px] font-bold text-gray-300 uppercase border border-gray-700">
           VFX / 4K
-        </div>
+        </div> */}
       </div>
     </div>
   );
