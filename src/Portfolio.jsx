@@ -18,27 +18,27 @@ const projects = [
   // Add as many videos as you need here
 ];
 
-const categories = ["All", "Short Film", "Music Video", "Commercial", "Corporate"];
+// const categories = ["All", "Short Film", "Music Video", "Commercial", "Corporate"];
 
 const Portfolio = () => {
-  const [activeFilter, setActiveFilter] = useState("All");
+//   const [activeFilter, setActiveFilter] = useState("All");
 
-  const filteredProjects = activeFilter === "All" 
-    ? projects 
-    : projects.filter(p => p.category === activeFilter);
+//   const filteredProjects = activeFilter === "All" 
+//     ? projects 
+//     : projects.filter(p => p.category === activeFilter);
 
   return (
     <section id="portfolio" className="py-12">
       <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
         <div>
-          <h2 className="text-xs tracking-widest text-gray-500 uppercase mb-2">Section 4</h2>
+          {/* <h2 className="text-xs tracking-widest text-gray-500 uppercase mb-2">Section 4</h2> */}
           <h3 className="text-3xl font-black uppercase tracking-tighter">Portfolio Gallery</h3>
           <p className="text-xs text-gray-400 mt-1 uppercase tracking-widest">Latest Projects</p>
         </div>
 
         {/* Category Filter - Essential for many videos */}
         <div className="flex flex-wrap gap-2">
-          {categories.map((cat) => (
+          {/* {categories.map((cat) => (
             <button
               key={cat}
               onClick={() => setActiveFilter(cat)}
@@ -50,7 +50,7 @@ const Portfolio = () => {
             >
               {cat}
             </button>
-          ))}
+          ))} */}
         </div>
       </div>
 
@@ -59,7 +59,7 @@ const Portfolio = () => {
         Uses a dense grid that matches the 'Alex Chen' reference aesthetic.
       */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
-        {filteredProjects.map((project) => (
+        {projects.map((project) => (
           <div key={project.id} className="group cursor-pointer">
             <div className="relative aspect-video rounded-xl overflow-hidden bg-gray-900 border border-gray-800 mb-3 shadow-lg">
               <img 
@@ -96,13 +96,13 @@ const Portfolio = () => {
       </div>
 
       {/* Load More Button - For scale */}
-      {filteredProjects.length > 4 && (
+      {/* {projects.length > 4 && (
         <div className="mt-12 flex justify-center">
           <button className="px-10 py-3 border border-gray-700 text-gray-400 text-[10px] uppercase tracking-[0.3em] hover:bg-white hover:text-black hover:border-white transition-all">
             Load More Projects
           </button>
         </div>
-      )}
+      )} */}
     </section>
   );
 };

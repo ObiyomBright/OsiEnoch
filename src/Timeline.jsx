@@ -6,7 +6,7 @@ const jobs = [
 
 const Timeline = () => (
   <section id="experience">
-    <h2 className="text-xs tracking-widest text-gray-400 uppercase mb-4">Section 2</h2>
+    {/* <h2 className="text-xs tracking-widest text-gray-400 uppercase mb-4">Section 2</h2> */}
     <h3 className="text-2xl font-bold mb-8 uppercase tracking-tight">Work Experience</h3>
     <div className="space-y-8 border-l border-blue-600 ml-2">
       {jobs.map((job, i) => (

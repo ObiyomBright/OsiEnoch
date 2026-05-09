@@ -5,14 +5,13 @@ const skills = [
   { name: 'Motion Graphics', icon: 'Ae', color: 'border-blue-500' },
   { name: 'After Effects', icon: 'Ae', color: 'border-indigo-500' },
   { name: 'Color Grading', icon: '🎨', color: 'border-yellow-500' },
-  { name: 'Sound Design', icon: '🌊', color: 'border-cyan-500' },
   { name: '3D Animation', icon: '📦', color: 'border-blue-400' },
 ];
 
 const Skills = () => {
   return (
     <section id="skills">
-      <h2 className="text-xs tracking-widest text-gray-500 uppercase mb-4">Section 3</h2>
+      {/* <h2 className="text-xs tracking-widest text-gray-500 uppercase mb-4">Section 3</h2> */}
       <h3 className="text-2xl font-bold uppercase mb-8">Core Skills</h3>
       <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
         {skills.map((skill, index) => (
