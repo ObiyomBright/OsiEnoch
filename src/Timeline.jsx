@@ -1,7 +1,28 @@
 const jobs = [
-  { year: "June - November 2024", title: "Social Media Manager", company: "Decent IT Services", desc: "I managed social media pages, developed engagement strategies, and edited promotional videos to boost brand visibility" },
-  { year: "August - October 2024", title: "Social Media Manager", company: "Brumsbase Aluminium Company", desc: "I handled social media management and branding strategies while creating video content of completed projects and testimonials to attract clients" },
-  { year: "June - September 2024", title: "Social Media Manager", company: "Tech City Real Estate Company", desc: "I filmed and edited promotional videos and managed social media content to showcase real estate properties and increase brand awareness" }
+  {
+    year: "2025 - Present",
+    title: "Freelance Video Editor",
+    company: "Self-Employed",
+    desc: "Edited promotional videos, cinematic reels, and social media content for brands, businesses, and content creators across Nigeria using Adobe Premiere Pro and CapCut."
+  },
+  {
+    year: "2024 - 2025",
+    title: "Video Editor & Content Creator",
+    company: "Tech City Real Estate",
+    desc: "Shot and edited high-converting real estate walkthrough videos, client testimonials, and social media ads to improve online engagement and property visibility."
+  },
+  {
+    year: "2024",
+    title: "Social Media Video Editor",
+    company: "Brumsbase Aluminium Company",
+    desc: "Created engaging promotional videos, project showcase edits, and branded social media content to strengthen the company’s online presence and attract customers."
+  },
+  {
+    year: "2024",
+    title: "Video Editor",
+    company: "Decent IT Services",
+    desc: "Produced and edited marketing videos, tutorials, and event highlight clips while supporting the company’s digital branding and online campaigns."
+  }
 ];
 
 const Timeline = () => (

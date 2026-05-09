@@ -29,7 +29,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="bg-[#1a1d20] p-8 rounded-xl border border-gray-800 max-w-2xl mx-auto my-12">
+    <section id="contact" className="bg-[#1a1d20] p-8 rounded-xl border border-gray-800 max-w-2xl mx-auto my-12 scroll-mt-16">
       <h3 className="text-xl font-bold mb-6 uppercase tracking-tighter">Let's Create Together</h3>
       
       <form className="space-y-4" onSubmit={handleSubmit}>
