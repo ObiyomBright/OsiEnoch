@@ -12,7 +12,7 @@ const Timeline = () => (
       {jobs.map((job, i) => (
         <div key={i} className="relative pl-8">
           <div className="absolute w-3 h-3 bg-blue-600 rounded-full -left-[6px] top-1.5 shadow-[0_0_10px_#2563eb]" />
-          <span className="text-sm text-gray-400 font-mono">{job.year}</span>
+          {/* <span className="text-sm text-gray-400 font-mono">{job.year}</span> */}
           <h4 className="text-lg font-bold text-white uppercase">{job.title} | <span className="text-blue-400">{job.company}</span></h4>
           <p className="text-sm text-gray-400 mt-2 max-w-md leading-relaxed">{job.desc}</p>
         </div>
