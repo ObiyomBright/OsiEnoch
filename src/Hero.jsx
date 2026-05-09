@@ -14,7 +14,7 @@ const Hero = () => {
   const videoRef = useRef(null);
 
   // TRANSFORMATION: Converts your GDrive view link to a direct stream link
-  const showreelUrl = "https://drive.google.com/uc?export=download&id=1kmq0nTY3WFJJcEQGQAMrTfBgvR-jwv_h";
+  const showreelUrl = "https://res.cloudinary.com/dhyg3bdle/video/upload/f_auto,q_auto/v1778341473/output_compressed_bxj0pz.mp4";
 
   useEffect(() => {
     const options = {
