@@ -44,7 +44,7 @@ function App() {
       </main>
 
       <footer className="py-8 text-center text-xs text-gray-500 border-t border-gray-800">
-        MOMODU OSIKHEPUE ENOCH | VIDEO EDITOR | @{year} | Built with Passion
+        © {year} MOMODU OSIKHEPUE ENOCH  &nbsp; • &nbsp; Video Editor & Visual Storyteller
       </footer>
     </div>
   );
