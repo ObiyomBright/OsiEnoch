@@ -1,22 +1,25 @@
 import React, { useEffect, useRef } from 'react';
 
-// Sample Video Data to fill the 'bins'
+// Using video thumbnails instead of picsum for the media bin
 const mediaGridItems = [
-  { id: 1, type: 'video', url: 'https://picsum.photos/seed/edit1/400/300', position: 'col-span-1 row-span-1' },
-  { id: 2, type: 'video', url: 'https://picsum.photos/seed/edit2/400/300', position: 'col-span-1 row-span-1' },
-  { id: 3, type: 'video', url: 'https://picsum.photos/seed/edit3/400/300', position: 'col-span-1 row-span-1' },
-  { id: 4, type: 'video', url: 'https://picsum.photos/seed/edit4/400/300', position: 'col-span-1 row-span-1' },
-  { id: 5, type: 'video', url: 'https://picsum.photos/seed/edit5/400/300', position: 'col-span-1 row-span-1' },
-  { id: 6, type: 'video', url: 'https://picsum.photos/seed/edit6/400/300', position: 'col-span-1 row-span-1' },
+  { id: 1, type: 'video', url: 'https://images.pexels.com/photos/257904/pexels-photo-257904.jpeg?auto=compress&cs=tinysrgb&w=400', position: 'col-span-1 row-span-1' },
+  { id: 2, type: 'video', url: 'https://images.pexels.com/photos/1117132/pexels-photo-1117132.jpeg?auto=compress&cs=tinysrgb&w=400', position: 'col-span-1 row-span-1' },
+  { id: 3, type: 'video', url: 'https://images.pexels.com/photos/2510428/pexels-photo-2510428.jpeg?auto=compress&cs=tinysrgb&w=400', position: 'col-span-1 row-span-1' },
+  { id: 4, type: 'video', url: 'https://images.pexels.com/photos/3062541/pexels-photo-3062541.jpeg?auto=compress&cs=tinysrgb&w=400', position: 'col-span-1 row-span-1' },
+  { id: 5, type: 'video', url: 'https://images.pexels.com/photos/2773498/pexels-photo-2773498.jpeg?auto=compress&cs=tinysrgb&w=400', position: 'col-span-1 row-span-1' },
+  { id: 6, type: 'video', url: 'https://images.pexels.com/photos/2873486/pexels-photo-2873486.jpeg?auto=compress&cs=tinysrgb&w=400', position: 'col-span-1 row-span-1' },
 ];
 
 const Hero = () => {
   const videoRef = useRef(null);
 
+  // TRANSFORMATION: Converts your GDrive view link to a direct stream link
+  const showreelUrl = "https://drive.google.com/uc?export=download&id=1kmq0nTY3WFJJcEQGQAMrTfBgvR-jwv_h";
+
   useEffect(() => {
     const options = {
-      root: null, // use the viewport
-      threshold: 0.5, // 50% of the video must be visible
+      root: null,
+      threshold: 0.5,
     };
 
     const handleIntersection = (entries) => {
@@ -94,18 +97,18 @@ const Hero = () => {
         <h3 className="text-2xl font-bold uppercase mb-8">Video Showreel</h3>
         <div className="aspect-video w-full max-w-5xl mx-auto rounded-xl overflow-hidden relative group cursor-pointer bg-black shadow-2xl border border-gray-800">
           
-          {/* Replaced Image with Video */}
           <video
             ref={videoRef}
-            src="YOUR_VIDEO_URL_HERE" // Paste your video URL here
+            src={showreelUrl}
             className="w-full h-full object-cover opacity-60 transition-opacity duration-300 group-hover:opacity-80"
             muted
             loop
             playsInline
+            controls
           />
 
-          <div className="absolute inset-0 flex flex-col items-center justify-center p-4 pointer-events-none">
-            {/* Minimalist Play Icon - Hidden when playing or on hover for better visibility */}
+          {/* Minimalist Play Icon - Note: pointer-events-none lets clicks through to the video controls */}
+          <div className="absolute inset-0 flex flex-col items-center justify-center p-4 pointer-events-none group-hover:hidden transition-all">
             <div className="w-24 h-24 flex items-center justify-center rounded-full border-2 border-white/40 bg-white/5 backdrop-blur-sm group-hover:scale-105 transition-transform">
               <div className="w-0 h-0 border-t-[14px] border-t-transparent border-l-[24px] border-l-white border-b-[14px] border-b-transparent ml-2" />
             </div>
