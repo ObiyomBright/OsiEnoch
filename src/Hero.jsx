@@ -100,7 +100,7 @@ const Hero = () => {
           <video
             ref={videoRef}
             src={showreelUrl}
-            className="w-full h-full object-cover opacity-60 transition-opacity duration-300 group-hover:opacity-80"
+            className="w-full h-full object-contain opacity-60 transition-opacity duration-300 group-hover:opacity-80"
             muted
             loop
             playsInline
@@ -118,6 +118,8 @@ const Hero = () => {
           </div>
         </div>
       </div>
+
+      
     </section>
   );
 };
