@@ -49,47 +49,52 @@ const Hero = () => {
 
   return (
     <section id="home" className="pt-24 pb-12">
-      <div className="relative aspect-[16/9] bg-[#0f1113] rounded-2xl overflow-hidden border border-gray-800 shadow-2xl">
         
-        {/* The Grid Background Layer */}
-        <div className="absolute inset-0 grid grid-cols-2 md:grid-cols-4 gap-2 p-2 opacity-30">
-          {mediaGridItems.map((item) => (
-            <div key={item.id} className={`${item.position} relative group rounded-lg overflow-hidden`}>
-              <img 
-                src={item.url} 
-                alt="Media preview" 
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" 
-              />
-              <div className="absolute top-1 right-1 px-1.5 py-0.5 text-[8px] bg-black/70 rounded text-gray-300 font-mono">
-                00:15
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Central CTA Overlay */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-8 bg-black/60 backdrop-blur-sm">
-          <div className="max-w-2xl space-y-4">
-            <h1 className="text-4xl md:text-5xl font-black uppercase tracking-tighter text-white">
-              <span className="text-gray-400">MOMODU OSIKHEPUE ENOCH</span> <br />
-              <span className="leading-tight">Professional Video Editor</span> <br />
-              & Motion Designer
-            </h1>
-            <p className="text-sm tracking-[0.2em] text-blue-400 uppercase">
-              Bringing Visual Stories to Life
-            </p>
-          </div>
-
-          <div className="flex gap-4 mt-10">
-            <a href="#portfolio" className="px-6 py-2 border border-white rounded-lg text-white text-sm font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-all cursor-pointer">
-              View Portfolio
-            </a>
-            <a href="#contact" className="px-6 py-2 bg-blue-600 text-white text-sm font-bold rounded-lg uppercase tracking-widest hover:bg-blue-700 transition-all shadow-[0_0_15px_rgba(37,99,235,0.4)]">
-              Hire Me
-            </a>
-          </div>
+      <div className="relative min-h-[500px] md:aspect-[16/9] bg-[#0f1113] rounded-2xl overflow-hidden border border-gray-800 shadow-2xl">
+  
+  {/* The Grid Background Layer */}
+  {/* Changed grid-cols-2 to grid-cols-3 on small mobile to fill space better */}
+  <div className="absolute inset-0 grid grid-cols-3 md:grid-cols-4 gap-2 p-2 opacity-30">
+    {mediaGridItems.map((item) => (
+      <div key={item.id} className={`${item.position} relative group rounded-lg overflow-hidden`}>
+        <img 
+          src={item.url} 
+          alt="Media preview" 
+          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" 
+        />
+        <div className="absolute top-1 right-1 px-1.5 py-0.5 text-[8px] bg-black/70 rounded text-gray-300 font-mono">
+          00:15
         </div>
       </div>
+    ))}
+  </div>
+
+  {/* Central CTA Overlay */}
+  {/* Changed p-8 to p-4 and added justify-center to keep things tight on mobile */}
+  <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4 md:p-8 bg-black/60 backdrop-blur-sm">
+    <div className="max-w-2xl space-y-3 md:space-y-4">
+      {/* Reduced text sizes for mobile: text-2xl base, text-4xl on desktop */}
+      <h1 className="text-2xl sm:text-3xl md:text-5xl font-black uppercase tracking-tighter text-white">
+        <span className="text-gray-400">MOMODU OSIKHEPUE ENOCH</span> <br />
+        <span className="leading-tight">Professional Video Editor</span> <br />
+        <span className="inline-block mt-1"> & Motion Designer</span>
+      </h1>
+      <p className="text-[10px] md:text-sm tracking-[0.1em] md:tracking-[0.2em] text-blue-400 uppercase">
+        Bringing Visual Stories to Life
+      </p>
+    </div>
+
+    {/* Flex-col on small mobile, flex-row on larger screens */}
+    <div className="flex flex-col sm:flex-row gap-3 md:gap-4 mt-8 md:mt-10 w-full sm:w-auto px-6 sm:px-0">
+      <a href="#portfolio" className="px-6 py-3 md:py-2 border border-white rounded-lg text-white text-xs md:text-sm font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-all cursor-pointer">
+        View Portfolio
+      </a>
+      <a href="#contact" className="px-6 py-3 md:py-2 bg-blue-600 text-white text-xs md:text-sm font-bold rounded-lg uppercase tracking-widest hover:bg-blue-700 transition-all shadow-[0_0_15px_rgba(37,99,235,0.4)]">
+        Hire Me
+      </a>
+    </div>
+  </div>
+</div>
 
       {/* Featured Showreel Section with Auto-play Video */}
       <div className="mt-16">

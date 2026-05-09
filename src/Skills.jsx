@@ -70,9 +70,9 @@ const Skills = () => {
             </p>
             
             {/* Tech Subtext (Optional, but adds to the 'Pro' look) */}
-            <p className="text-[8px] uppercase font-bold text-gray-500 tracking-tighter">
+            {/* <p className="text-[8px] uppercase font-bold text-gray-500 tracking-tighter">
               {skill.tech}
-            </p>
+            </p> */}
           </div>
         ))}
       </div>
