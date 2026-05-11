@@ -118,7 +118,7 @@ const Hero = () => {
               <div className="w-0 h-0 border-t-[14px] border-t-transparent border-l-[24px] border-l-white border-b-[14px] border-b-transparent ml-2" />
             </div>
             <p className="absolute bottom-6 left-6 font-black tracking-tighter uppercase text-xl text-white">
-              Featured Showreel 2024
+              Featured Showreel
             </p>
           </div>
         </div>
