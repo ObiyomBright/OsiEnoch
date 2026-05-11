@@ -45,8 +45,8 @@ function App() {
         </div>
       </main>
 
-      <footer className="py-8 text-center text-xs text-gray-500 border-t border-gray-800">
-        © {year} MOMODU OSIKHEPUE ENOCH  &nbsp; • &nbsp; Video Editor & Visual Storyteller
+      <footer className="py-8 text-center text-sm text-gray-500 border-t border-gray-800">
+        © {year} MOMODU OSI ENOCH <br /> Video Editor & Visual Storyteller
       </footer>
     </div>
   );

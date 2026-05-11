@@ -75,7 +75,7 @@ const Hero = () => {
     <div className="max-w-2xl space-y-3 md:space-y-4">
       {/* Reduced text sizes for mobile: text-2xl base, text-4xl on desktop */}
       <h1 className="text-2xl sm:text-3xl md:text-5xl font-black uppercase tracking-tighter text-white">
-        <span className="text-gray-400">MOMODU OSIKHEPUE ENOCH</span> <br />
+        <span className="text-gray-400">MOMODU OSI ENOCH</span> <br />
         <span className="leading-tight">Professional Video Editor</span> <br />
         <span className="inline-block mt-1"> & Motion Designer</span>
       </h1>
