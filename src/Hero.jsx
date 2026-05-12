@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 // Using video thumbnails instead of picsum for the media bin
 const mediaGridItems = [
@@ -12,6 +12,7 @@ const mediaGridItems = [
 
 const Hero = () => {
   const videoRef = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(false);
 
   // TRANSFORMATION: Converts your GDrive view link to a direct stream link
   const showreelUrl = "https://res.cloudinary.com/dhyg3bdle/video/upload/f_auto,q_auto/v1778341473/output_compressed_bxj0pz.mp4";
@@ -53,7 +54,6 @@ const Hero = () => {
       <div className="relative min-h-[500px] md:aspect-[16/9] bg-[#0f1113] rounded-2xl overflow-hidden border border-gray-800 shadow-2xl">
   
   {/* The Grid Background Layer */}
-  {/* Changed grid-cols-2 to grid-cols-3 on small mobile to fill space better */}
   <div className="absolute inset-0 grid grid-cols-3 md:grid-cols-4 gap-2 p-2 opacity-30">
     {mediaGridItems.map((item) => (
       <div key={item.id} className={`${item.position} relative group rounded-lg overflow-hidden`}>
@@ -70,21 +70,17 @@ const Hero = () => {
   </div>
 
   {/* Central CTA Overlay */}
-  {/* Changed p-8 to p-4 and added justify-center to keep things tight on mobile */}
   <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4 md:p-8 bg-black/60 backdrop-blur-sm">
     <div className="max-w-2xl space-y-3 md:space-y-4">
-      {/* Reduced text sizes for mobile: text-2xl base, text-4xl on desktop */}
       <h1 className="text-2xl sm:text-3xl md:text-5xl font-black uppercase tracking-tighter text-white">
         <span className="text-gray-400">MOMODU OSI ENOCH</span> <br />
         <span className="leading-tight">Professional Video Editor</span> <br />
-        {/* <span className="inline-block mt-1"> & Motion Designer</span> */}
       </h1>
       <p className="text-[10px] md:text-sm tracking-[0.1em] md:tracking-[0.2em] text-blue-400 uppercase">
         Bringing Visual Stories to Life
       </p>
     </div>
 
-    {/* Flex-col on small mobile, flex-row on larger screens */}
     <div className="flex flex-col sm:flex-row gap-3 md:gap-4 mt-8 md:mt-10 w-full sm:w-auto px-6 sm:px-0">
       <a href="#portfolio" className="px-6 py-3 md:py-2 border border-white rounded-lg text-white text-xs md:text-sm font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-all cursor-pointer">
         View Portfolio
@@ -98,33 +94,29 @@ const Hero = () => {
 
       {/* Featured Showreel Section with Auto-play Video */}
       <div className="mt-16">
-        {/* <h2 className="text-xs tracking-widest text-gray-500 uppercase mb-4">Section 1</h2> */}
         <h3 className="text-2xl font-bold uppercase mb-8">Video Showreel</h3>
         <div className="aspect-video w-full max-w-5xl mx-auto rounded-xl overflow-hidden relative group cursor-pointer bg-black shadow-2xl border border-gray-800">
           
           <video
             ref={videoRef}
             src={showreelUrl}
-            className="w-full h-full object-contain opacity-60 transition-opacity duration-300 group-hover:opacity-80"
+            className={`w-full h-full object-contain transition-opacity duration-300 ${isPlaying ? 'opacity-100' : 'opacity-60'}`}
             muted
             loop
             playsInline
             controls
+            onPlay={() => setIsPlaying(true)}
+            onPause={() => setIsPlaying(false)}
           />
 
-          {/* Minimalist Play Icon - Note: pointer-events-none lets clicks through to the video controls */}
-          <div className="absolute inset-0 flex flex-col items-center justify-center p-4 pointer-events-none group-hover:hidden transition-all">
+          {/* Minimalist Play Icon - Logic: disappears when isPlaying is true */}
+          <div className={`absolute inset-0 flex flex-col items-center justify-center p-4 pointer-events-none transition-opacity duration-500 ${isPlaying ? 'opacity-0' : 'opacity-100'}`}>
             <div className="w-24 h-24 flex items-center justify-center rounded-full border-2 border-white/40 bg-white/5 backdrop-blur-sm group-hover:scale-105 transition-transform">
               <div className="w-0 h-0 border-t-[14px] border-t-transparent border-l-[24px] border-l-white border-b-[14px] border-b-transparent ml-2" />
             </div>
-            {/* <p className="absolute bottom-6 left-6 font-black tracking-tighter uppercase text-xl text-white">
-              Featured Showreel
-            </p> */}
           </div>
         </div>
       </div>
-
-      
     </section>
   );
 };
