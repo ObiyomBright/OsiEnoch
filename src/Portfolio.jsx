@@ -9,7 +9,7 @@ const projects = [
   { id: 4, videoUrl: "https://res.cloudinary.com/dhyg3bdle/video/upload/f_auto,q_auto/v1778587978/Meet_Shalom___from_beginner_to_confident_Web_Developer._In_this_graduation_interview__Shalom_shares_her_journey_at_DITS_Academy_from_struggling_with_p5aibp.mp4" },
 
 
-  { id: 5, videoUrl: "https://res.cloudinary.com/dhyg3bdle/video/upload/f_auto,q_auto/v1778343890/compressed_James_Coffe_Vox_nubfiw.mp4" },
+  // { id: 5, videoUrl: "https://res.cloudinary.com/dhyg3bdle/video/upload/f_auto,q_auto/v1778343890/compressed_James_Coffe_Vox_nubfiw.mp4" },
   { id: 6, videoUrl: "https://res.cloudinary.com/dhyg3bdle/video/upload/f_auto,q_auto/v1778343887/compressed_How_to_Create_a_Budget_that_Works_For_You_vuhv0t.mp4" },
   { id: 7, videoUrl: "https://res.cloudinary.com/dhyg3bdle/video/upload/f_auto,q_auto/v1778343886/compressed_Elympics_ai_kgnbqh.mp4" },
   { id: 8, videoUrl: "https://res.cloudinary.com/dhyg3bdle/video/upload/f_auto,q_auto/v1778343885/compressed_Vox_Style_Merry_Christmas_Edit_ukzff5.mp4" },
