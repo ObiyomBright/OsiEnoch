@@ -75,7 +75,7 @@ const Portfolio = () => {
     <section id="portfolio" className="py-12">
       <div className="mb-12">
         <h3 className="text-3xl font-black uppercase tracking-tighter">Portfolio Gallery</h3>
-        <p className="text-[10px] text-blue-500 font-bold uppercase tracking-[0.3em] mt-2">Selected Works</p>
+        {/* <p className="text-[10px] text-blue-500 font-bold uppercase tracking-[0.3em] mt-2">Selected Works</p> */}
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
