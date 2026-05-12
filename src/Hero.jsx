@@ -77,7 +77,7 @@ const Hero = () => {
       <h1 className="text-2xl sm:text-3xl md:text-5xl font-black uppercase tracking-tighter text-white">
         <span className="text-gray-400">MOMODU OSI ENOCH</span> <br />
         <span className="leading-tight">Professional Video Editor</span> <br />
-        <span className="inline-block mt-1"> & Motion Designer</span>
+        {/* <span className="inline-block mt-1"> & Motion Designer</span> */}
       </h1>
       <p className="text-[10px] md:text-sm tracking-[0.1em] md:tracking-[0.2em] text-blue-400 uppercase">
         Bringing Visual Stories to Life

@@ -22,7 +22,7 @@ const skills = [
     tech: 'After Effects'
   },
   { 
-    name: 'VFX & Animation', 
+    name: 'Motion Animation', 
     icon: <Zap size={32} />, 
     color: 'border-indigo-500',
     tech: 'After Effects'

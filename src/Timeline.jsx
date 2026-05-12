@@ -13,7 +13,7 @@ const jobs = [
   },
   {
     year: "2024",
-    title: "Social Media Video Editor",
+    title: "Video Editor",
     company: "Brumsbase Aluminium Company",
     desc: "Created engaging promotional videos, project showcase edits, and branded social media content to strengthen the company’s online presence and attract customers."
   },
