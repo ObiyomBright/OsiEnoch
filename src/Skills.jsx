@@ -50,7 +50,7 @@ const skills = [
 const Skills = () => {
   return (
     <section id="skills" className="scroll-mt-24">
-      <h2 className="text-xs tracking-widest text-gray-500 uppercase mb-4">Section 3</h2>
+      {/* <h2 className="text-xs tracking-widest text-gray-500 uppercase mb-4">Section 3</h2> */}
       <h3 className="text-2xl font-black uppercase mb-8 tracking-tighter">Core Skills</h3>
       
       <div className="grid grid-cols-2 md:grid-cols-3 gap-4">

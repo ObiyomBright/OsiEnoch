@@ -2,7 +2,7 @@ const jobs = [
   {
     year: "2025 - Present",
     title: "Freelance Video Editor",
-    company: "Self-Employed",
+    company: "DITS Academy",
     desc: "Edited promotional videos, cinematic reels, and social media content for brands, businesses, and content creators across Nigeria using Adobe Premiere Pro and CapCut."
   },
   {
