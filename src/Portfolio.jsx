@@ -2,11 +2,11 @@ import React, { useState, useEffect, useRef } from 'react';
 import { X, Maximize2 } from 'lucide-react';
 
 const projects = [
-{ id: 1, videoUrl: "https://res.cloudinary.com/dhyg3bdle/video/upload/f_auto,q_auto/v1778588548/Is_your_password_really_keeping_you_safe__Hackers_can_crack_weak_passwords_in_seconds__Use_long_passphrases_and_enable_Two-Factor_Authentication_2FA_etbyw6.mp4" },
+  { id: 1, videoUrl: "https://res.cloudinary.com/dhyg3bdle/video/upload/f_auto,q_auto/v1778588548/Is_your_password_really_keeping_you_safe__Hackers_can_crack_weak_passwords_in_seconds__Use_long_passphrases_and_enable_Two-Factor_Authentication_2FA_etbyw6.mp4" },
   { id: 2, videoUrl: "https://res.cloudinary.com/dhyg3bdle/video/upload/f_auto,q_auto/v1778587949/Earn_With_Tech_in_90_Days__What_s_Real___What_s_Not_Everyone_is_talking_about_making_money_in_tech_but_what_s_actually_real__and_what_s_just_hype__jgl1fc.mp4" },
   { id: 3, videoUrl: "https://res.cloudinary.com/dhyg3bdle/video/upload/f_auto,q_auto/v1778587950/Feeling_stuck_after_graduation__Many_graduates__NYSC_corps_members__and_soon-to-graduate_students_feel_confused_about_their_next_steps._Applications__on_dhyjpn.mp4" },
   { id: 4, videoUrl: "https://res.cloudinary.com/dhyg3bdle/video/upload/f_auto,q_auto/v1778587978/Meet_Shalom___from_beginner_to_confident_Web_Developer._In_this_graduation_interview__Shalom_shares_her_journey_at_DITS_Academy_from_struggling_with_p5aibp.mp4" },
-  
+
 
   { id: 5, videoUrl: "https://res.cloudinary.com/dhyg3bdle/video/upload/f_auto,q_auto/v1778343890/compressed_James_Coffe_Vox_nubfiw.mp4" },
   { id: 6, videoUrl: "https://res.cloudinary.com/dhyg3bdle/video/upload/f_auto,q_auto/v1778343887/compressed_How_to_Create_a_Budget_that_Works_For_You_vuhv0t.mp4" },

@@ -117,9 +117,9 @@ const Hero = () => {
             <div className="w-24 h-24 flex items-center justify-center rounded-full border-2 border-white/40 bg-white/5 backdrop-blur-sm group-hover:scale-105 transition-transform">
               <div className="w-0 h-0 border-t-[14px] border-t-transparent border-l-[24px] border-l-white border-b-[14px] border-b-transparent ml-2" />
             </div>
-            <p className="absolute bottom-6 left-6 font-black tracking-tighter uppercase text-xl text-white">
+            {/* <p className="absolute bottom-6 left-6 font-black tracking-tighter uppercase text-xl text-white">
               Featured Showreel
-            </p>
+            </p> */}
           </div>
         </div>
       </div>
